@@ -40,7 +40,10 @@ public class FlavorsController : Controller
   }
   public ActionResult Details(int id)
   {
-    Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
+    Flavor thisFlavor = _db.Flavors
+    .Include(flavor => flavor.FlavorTreats)
+    .ThenInclude(join => join.Treat)
+    .FirstOrDefault(flavor => flavor.FlavorId == id);
     return View(thisFlavor);
   }
   public ActionResult Edit(int id)

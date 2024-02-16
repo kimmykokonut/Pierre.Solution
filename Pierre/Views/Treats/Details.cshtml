@@ -9,8 +9,25 @@
 <h4>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h4>
 <h4>@Html.DisplayNameFor(model => model.Price): $@Html.DisplayFor(model => model.Price)</h4>
 <p>@Html.DisplayNameFor(model => model.AddDate): @Model.AddDate.ToString("dd MMMM yyyy")</p>
-
-<p>type tags here</p>
-
+<hr />
+@if (@Model.FlavorTreats.Count == 0)
+{
+  <p>No flavors attached to this treat yet...</p>
+}
+else
+{
+  <h4>Flavors</h4>
+  @foreach (FlavorTreat join in Model.FlavorTreats)
+  {
+    <h3>@join.Flavor.Type</h3>
+    @* @using (Html.BeginForm("DeleteFlavor", "Flavors"))
+{
+@Html.Hidden("joinId", @join.FlavorTreatId)
+<input type="submit" value="🗑️" />
+} *@
+  }
+}
+<p>@Html.ActionLink("Add flavor to this treat", "AddFlavor", new { id = Model.TreatId })</p>
+<hr />
 <p>@Html.ActionLink("🔄 Update info", "Edit", new { id = Model.TreatId })</p>
 <p>@Html.ActionLink("🗑️ Delete", "Delete", new { id = Model.TreatId })</p>
