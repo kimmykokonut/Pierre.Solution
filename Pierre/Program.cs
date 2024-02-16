@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using ProjectName.Models;
+using Pierre.Models;
 
-namespace ProjectName //change name
+namespace Pierre 
 {
   class Program 
   {
@@ -13,7 +13,7 @@ namespace ProjectName //change name
 
       builder.Services.AddControllersWithViews();
 
-      builder.Services.AddDbContext<ProjectNameContext>(
+      builder.Services.AddDbContext<PierreContext>(
                         dbContextOptions => dbContextOptions
                           .UseMySql(
                             builder.Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"]

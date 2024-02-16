@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models; //change
+using Pierre.Models; 
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 
-namespace ProjectName.Controllers;
+namespace Pierre.Controllers;
 
-public class ClassNameSController : Controller
+public class TreatsController : Controller
 {
-  private readonly ProjectNameContext _db;
-  public ClassNameSController(ProjectNameContext db)
+  private readonly PierreContext _db;
+  public ClassNameSController(PierreContext db)
   {
     _db = db;
   }
