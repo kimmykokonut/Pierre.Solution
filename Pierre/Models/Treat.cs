@@ -15,6 +15,7 @@ public class Treat
   [Required(ErrorMessage = "You must enter a price")]
 
   public int Price { get; set; }
+  [Display(Name = "Created")]
   public DateOnly AddDate { get; set; } = DateOnly.FromDateTime(DateTime.Now);
   public List<FlavorTreat> FlavorTreats { get; }
 }

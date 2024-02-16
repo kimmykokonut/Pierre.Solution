@@ -1,0 +1,16 @@
+@{
+  ViewData["Title"] = "See treat details";
+  Layout = "_Layout";
+}
+@using Pierre.Models
+@model Pierre.Models.Treat
+<h2>Details for "@Html.DisplayFor(model => model.Name)"</h2>
+<hr />
+<h4>@Html.DisplayFor(model => model.Description)</h4>
+<h4>@Html.DisplayNameFor(model => model.Price): $@Html.DisplayFor(model => model.Price)</h4>
+<p>@Html.DisplayNameFor(model => model.AddDate): @Model.AddDate.ToString("dd MMMM yyyy")</p>
+
+<p>type tags here</p>
+
+<p>@Html.ActionLink("🔄 Update info", "Edit", new { id = Model.TreatId })</p>
+<p>@Html.ActionLink("🗑️ Delete", "Delete", new { id = Model.TreatId })</p>

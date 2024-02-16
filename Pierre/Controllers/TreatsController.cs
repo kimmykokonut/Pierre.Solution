@@ -38,4 +38,9 @@ public class TreatsController : Controller
       return RedirectToAction("Index");
     }
   }
+  public ActionResult Details(int id)
+  {
+    Treat thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
+    return View(thisTreat);
+  }
 }
