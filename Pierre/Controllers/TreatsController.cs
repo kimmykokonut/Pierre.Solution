@@ -17,8 +17,11 @@ public class TreatsController : Controller
   }
   public ActionResult Index()
   {
-    return View();
-    // List<ClassName> model = _db.Stylists.ToList();
-    // return View(model);
+    List<Treat> model = _db.Treats.ToList();
+    return View(model);
+  }
+  public ActionResult Create()
+  {
+    
   }
 }

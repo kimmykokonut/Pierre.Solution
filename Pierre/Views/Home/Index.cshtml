@@ -2,4 +2,33 @@
   ViewData["Title"] = "Home";
   Layout = "_Layout";
 }
-<h1>Home Index Page</h1>
+<h1>splash</h1>
+@* <div class="container">
+  <div class="row">
+    <div class="col" id="splashCard">
+      <h3 class="text-center">Treats</h3>
+      @if (Model["treats"].Length == 0)
+      {
+        <p>No treats have been added yet!</p>
+      }
+      <ul>
+        @foreach (Treat treat in Model["treats"])
+        {
+          <li>@Html.ActionLink(@treat.Name, "Details", "Treats", new { id = @treat.TreatId })</li>
+        }
+      </ul>
+    </div>
+    <div class="col" id="splashCard">
+      <h3 class="text-center">Flavors</h3>
+      @if (Model["flavors"].Length == 0)
+      {
+        <p>No flavors have been added yet!</p>
+      }
+      <ul>
+        @foreach (Flavor flavor in Model["flavors"])
+        {
+          <li>@Html.ActionLink(@flavor.Type, "Details", "Flavors", new { id = @flavor.FlavorId })</li>
+        }
+      </ul>
+    </div>
+  </div> *@
