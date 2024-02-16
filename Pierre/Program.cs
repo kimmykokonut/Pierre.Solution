@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Pierre.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace Pierre 
+namespace Pierre
 {
-  class Program 
+  class Program
   {
     static void Main(string[] args)
     {
@@ -24,6 +24,17 @@ namespace Pierre
       builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
       .AddEntityFrameworkStores<PierreContext>()
       .AddDefaultTokenProviders();
+
+      //to override default password settings for less dev stress
+      builder.Services.Configure<IdentityOptions>(options =>
+{
+  options.Password.RequireDigit = false;
+  options.Password.RequireLowercase = false;
+  options.Password.RequireNonAlphanumeric = false;
+  options.Password.RequireUppercase = false;
+  options.Password.RequiredLength = 0;
+  options.Password.RequiredUniqueChars = 0;
+});
 
       WebApplication app = builder.Build();
 
