@@ -16,13 +16,15 @@ else
   @foreach(FlavorTreat join in Model.FlavorTreats)
   {
     <h3>@join.Treat.Name</h3>
-    @* @using (Html.BeginForm("DeleteTreat", "Treats"))
+    @using (Html.BeginForm("DeleteTreat", "Flavors"))
     {
       @Html.Hidden("joinId", @join.FlavorTreatId)
+      @Html.Hidden("flavorId", Model.FlavorId)
       <input type="submit" value="🗑️" />
-    } *@
+    }
   }
 }
+<p>@Html.ActionLink("Add treat to this flavor", "AddTreat", new { id = Model.FlavorId })</p>
 <hr />
 <p>@Html.ActionLink("🔄 Update info", "Edit", new { id = Model.FlavorId })</p>
 <p>@Html.ActionLink("🗑️ Delete", "Delete", new { id = Model.FlavorId })</p>
