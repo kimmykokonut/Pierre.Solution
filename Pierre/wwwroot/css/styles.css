@@ -1,3 +1,10 @@
+body {
+  background-color: #38868c;
+}
+#header {
+  background-color: #1c5e64;
+}
+
 #logo {
   display: block;
   width: 80vw;
@@ -15,3 +22,18 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+#splashCard {
+  background-color: #b9a33e;
+  padding: 5px;
+  padding-top: 10px;
+  border: 1px solid black;
+  border-radius: 5%;
+  margin: 7px;
+}
+a {
+  text-decoration: none;
+  color: #8e711f;
+}
+/* #9569a5;
+ /* #8e711f; */

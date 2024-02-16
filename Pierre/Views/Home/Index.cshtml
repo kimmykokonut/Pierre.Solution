@@ -2,8 +2,9 @@
   ViewData["Title"] = "Home";
   Layout = "_Layout";
 }
-<h1>splash</h1>
-@* <div class="container">
+@using Pierre.Models;
+
+<div class="container">
   <div class="row">
     <div class="col" id="splashCard">
       <h3 class="text-center">Treats</h3>
@@ -11,12 +12,10 @@
       {
         <p>No treats have been added yet!</p>
       }
-      <ul>
         @foreach (Treat treat in Model["treats"])
         {
-          <li>@Html.ActionLink(@treat.Name, "Details", "Treats", new { id = @treat.TreatId })</li>
+          <h5 class="text-center">@Html.ActionLink(@treat.Name, "Details", "Treats", new { id = @treat.TreatId })</h5>
         }
-      </ul>
     </div>
     <div class="col" id="splashCard">
       <h3 class="text-center">Flavors</h3>
@@ -24,11 +23,9 @@
       {
         <p>No flavors have been added yet!</p>
       }
-      <ul>
         @foreach (Flavor flavor in Model["flavors"])
         {
-          <li>@Html.ActionLink(@flavor.Type, "Details", "Flavors", new { id = @flavor.FlavorId })</li>
+          <h5 class="text-center">@Html.ActionLink(@flavor.Type, "Details", "Flavors", new { id = @flavor.FlavorId })</h5>
         }
-      </ul>
     </div>
-  </div> *@
+  </div>

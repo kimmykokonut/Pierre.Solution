@@ -1,18 +1,22 @@
-# Pierre's Third Bakery
+# Pierre's Pastries, take 3
 
 _by Kim Robinson_
 
-## Description
+## An application with user authentication and many to many relationships with a theme of treats and flavor tags with full CRUD. Color palate is accessibility approved.
 
 ###  This app will allow a user to:
-    - DO THINGS
+    - register, log in and log out of an account
+    - have create, delete and update functionality when logged in
+    - all users have read functionality
+    - see both sides of the many-to-many relationship of Treats & Flavors
+    - see a splash page listing all available treats and flavors, which each link to their detail page
 
 ### Technologies Used
 
 * C#
 * ASP.Net Core Mvc
 * Entity Framework Core
-* Identity for Authentication
+* Identity (for Authentication)
 * MySql database
 * MySql Workbench
 * Git
@@ -185,6 +189,9 @@ _Optionally you can use a file watcher so you don't have to restart the server e
 * None known at this time
 
 ## Stretch Goals
+* Have separate roles for admins and logged in users (only admin can add, update, delete)
+* Add order form accessible to logged in users
+* Logged in user can only create, read, update, delete own orders.
 
 
 ## License
