@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,6 +15,6 @@ public class Treat
   [Required(ErrorMessage = "You must enter a price")]
 
   public int Price { get; set; }
-  public DateOnly AddDate { get; set; } = DateOnly.DateTime.Now;
+  public DateOnly AddDate { get; set; } = DateOnly.FromDateTime(DateTime.Now);
   public List<FlavorTreat> FlavorTreats { get; }
 }
