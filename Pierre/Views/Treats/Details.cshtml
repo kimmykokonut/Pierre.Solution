@@ -6,7 +6,7 @@
 @model Pierre.Models.Treat
 <h2>Details for "@Html.DisplayFor(model => model.Name)"</h2>
 <hr />
-<h4>@Html.DisplayFor(model => model.Description)</h4>
+<h4>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h4>
 <h4>@Html.DisplayNameFor(model => model.Price): $@Html.DisplayFor(model => model.Price)</h4>
 <p>@Html.DisplayNameFor(model => model.AddDate): @Model.AddDate.ToString("dd MMMM yyyy")</p>
 

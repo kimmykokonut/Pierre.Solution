@@ -1,0 +1,15 @@
+@{
+  ViewData["Title"] = "Edit flavor details";
+  Layout = "_Layout";
+}
+@model Pierre.Models.Flavor
+<h2>Edit "@Model.Type"</h2>
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.FlavorId)
+
+  @Html.LabelFor(model => model.Type)
+  @Html.EditorFor(model => model.Type)
+  <br />
+  <input type="submit" value="update" />
+}

@@ -1,0 +1,16 @@
+@{
+  ViewData["Title"] = "Add flavor";
+  Layout = "_Layout";
+}
+@model Pierre.Models.Flavor;
+<h3>Create a flavor type</h3>
+<hr />
+<p>@Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Type)
+  @Html.TextBoxFor(model => model.Type)
+  <br />
+  <input type="submit" value="create" />
+}

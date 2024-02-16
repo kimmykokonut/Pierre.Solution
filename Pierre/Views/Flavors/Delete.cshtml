@@ -1,0 +1,12 @@
+@{
+  ViewData["Title"] = "Delete flavor";
+  Layout = "_Layout";
+}
+@model Pierre.Models.Flavor
+
+<h2>Are you sure you want to delete "@Model.Type"?</h2>
+@using (Html.BeginForm())
+{
+  <input type="submit" value="delete" />
+}
+<p>@Html.ActionLink("Back to flavor list", "Index")</p>

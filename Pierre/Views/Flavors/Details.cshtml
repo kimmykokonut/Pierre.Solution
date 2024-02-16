@@ -1,0 +1,13 @@
+@{
+  ViewData["Title"] = "See flavor details";
+  Layout = "_Layout";
+}
+@using Pierre.Models
+@model Pierre.Models.Flavor
+<h2>Flavor: @Html.DisplayFor(model => model.Type)</h2>
+<hr />
+
+<p>treats belonging here</p>
+
+<p>@Html.ActionLink("🔄 Update info", "Edit", new { id = Model.FlavorId })</p>
+<p>@Html.ActionLink("🗑️ Delete", "Delete", new { id = Model.FlavorId })</p>
