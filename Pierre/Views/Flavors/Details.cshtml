@@ -13,7 +13,7 @@
 else
 {
   <h4>Associated treats</h4>
-  @foreach(FlavorTreat join in Model.FlavorTreats)
+  @foreach (FlavorTreat join in Model.FlavorTreats)
   {
     <h3>@join.Treat.Name</h3>
     @using (Html.BeginForm("DeleteTreat", "Flavors"))
@@ -24,7 +24,7 @@ else
     }
   }
 }
-<p>@Html.ActionLink("Add treat to this flavor", "AddTreat", new { id = Model.FlavorId })</p>
+<p class="button-55">@Html.ActionLink("Add treat to this flavor", "AddTreat", new { id = Model.FlavorId })</p>
 <hr />
-<p>@Html.ActionLink("🔄 Update info", "Edit", new { id = Model.FlavorId })</p>
-<p>@Html.ActionLink("🗑️ Delete", "Delete", new { id = Model.FlavorId })</p>
+<p class="button-55">@Html.ActionLink("🔄 Update info", "Edit", new { id = Model.FlavorId })</p>
+<p class="button-55">@Html.ActionLink("🗑️ Delete", "Delete", new { id = Model.FlavorId })</p>

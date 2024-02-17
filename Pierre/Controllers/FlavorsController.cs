@@ -102,6 +102,4 @@ public class FlavorsController : Controller
     _db.SaveChanges();
     return RedirectToAction("Details", new { id = flavorId });
   }
-
-
 }

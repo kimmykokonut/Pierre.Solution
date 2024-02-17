@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Pierre.Models; 
+using Pierre.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
@@ -84,14 +84,14 @@ public class TreatsController : Controller
   [HttpPost]
   public ActionResult AddFlavor(Treat treat, int flavorId)
   {
-        #nullable enable
-        FlavorTreat? joinEntity = _db.FlavorTreats.FirstOrDefault(join => (join.FlavorId == flavorId && join.TreatId == treat.TreatId));
-        #nullable disable
-        if (joinEntity == null && flavorId != 0)
-        {
-          _db.FlavorTreats.Add(new FlavorTreat() { FlavorId = flavorId, TreatId = treat.TreatId });
-          _db.SaveChanges();
-        }
+#nullable enable
+    FlavorTreat? joinEntity = _db.FlavorTreats.FirstOrDefault(join => (join.FlavorId == flavorId && join.TreatId == treat.TreatId));
+#nullable disable
+    if (joinEntity == null && flavorId != 0)
+    {
+      _db.FlavorTreats.Add(new FlavorTreat() { FlavorId = flavorId, TreatId = treat.TreatId });
+      _db.SaveChanges();
+    }
     return RedirectToAction("Details", new { id = treat.TreatId });
   }
   [HttpPost]
@@ -102,5 +102,4 @@ public class TreatsController : Controller
     _db.SaveChanges();
     return RedirectToAction("Details", new { id = treatId });
   }
-
 }

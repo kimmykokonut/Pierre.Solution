@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Pierre.Models; 
+namespace Pierre.Models;
 
-public class Treat 
+public class Treat
 {
   public int TreatId { get; set; }
   [Required(ErrorMessage = "You must enter a name")]

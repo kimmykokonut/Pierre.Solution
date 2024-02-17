@@ -1,16 +1,16 @@
+<div class="m-3" style="float: right;">
+  @if (User.Identity.IsAuthenticated)
+  {
+    <p>Logged in: @User.Identity.Name</p>
+    <p class="button-55">@Html.ActionLink("log out", "Index", "Account")</p>
+  }
+  else
+  {
+    <p class="button-55">@Html.ActionLink("log in", "Login", "Account")</p>
+    <p class="button-55">@Html.ActionLink("register", "Register", "Account")</p>
+  }
+</div>
 <div id="header">
-  <div class="m-3" style="float: right;">
-    @if (User.Identity.IsAuthenticated)
-    {
-      <p>Logged in: @User.Identity.Name</p>
-      <p>Done? @Html.ActionLink("log out", "Index", "Account")</p>
-    }
-    else
-    {
-      <p>@Html.ActionLink("log in", "Login", "Account")</p>
-      <p>@Html.ActionLink("register", "Register")</p>
-    }
-  </div>
   <a href="/">
     <img id="logo" src="~/img/logo.png" alt="logo for application, click on routes to home page">
   </a>

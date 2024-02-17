@@ -12,10 +12,10 @@
 else
 {
   <ul>
-    @foreach(Treat treat in Model)
+  @foreach (Treat treat in Model)
     {
       <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId }) </li>
     }
   </ul>
 }
-<p>@Html.ActionLink("Add new treat", "Create")</p>
+<p class="button-55">@Html.ActionLink("Add new treat", "Create")</p>

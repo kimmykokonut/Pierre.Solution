@@ -9,19 +9,10 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.TreatId)
-
-  @* @if (ViewBag.FlavorId != null && (SelectList)ViewBag.FlavorId).Count() > 0)
-  {
-    <hr />
-    <p>No flavors have been created yet...</p>
-    <p>You can add a new flavor @Html.ActionLink("here", "Create", "Flavors")</p>
-    <hr />
-  } *@
-  @* else *@
   {
     @Html.Label("Select flavor")
     @Html.DropDownList("FlavorId")
     <br />
-    <input type="submit" value="Save" />
+    <input type="submit" value="Save" class="button-55" />
   }
 }

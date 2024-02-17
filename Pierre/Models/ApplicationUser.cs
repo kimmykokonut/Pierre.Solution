@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Pierre.Models;
 
-public class ApplicationUser: IdentityUser
+public class ApplicationUser : IdentityUser
 {
   [Required(ErrorMessage = "You must enter a user name")]
   public string NickName { get; set; }

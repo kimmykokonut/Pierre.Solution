@@ -21,14 +21,15 @@ else
   {
     <h3>@join.Flavor.Type</h3>
     @using (Html.BeginForm("DeleteFlavor", "Treats"))
-{
-@Html.Hidden("joinId", @join.FlavorTreatId)
-@Html.Hidden("treatId", Model.TreatId)
-<input type="submit" value="🗑️" />
-}
+    {
+      @Html.Hidden("joinId", @join.FlavorTreatId)
+      @Html.Hidden("treatId", Model.TreatId)
+      <input type="submit" value="🗑️" class="button-55" />
+    }
   }
 }
-<h6 class="btn btn-sm btn-outline-info">@Html.ActionLink("Add flavor to this treat", "AddFlavor", new { id = Model.TreatId })</h6>
+<h6 class="button-55">@Html.ActionLink("Add flavor to this treat", "AddFlavor", new { id = Model.TreatId })
+</h6>
 <hr />
-<p>@Html.ActionLink("🔄 Update info", "Edit", new { id = Model.TreatId })</p>
-<p>@Html.ActionLink("🗑️ Delete", "Delete", new { id = Model.TreatId })</p>
+<p class="button-55">@Html.ActionLink("🔄 Update info", "Edit", new { id = Model.TreatId })</p>
+<p class="button-55">@Html.ActionLink("🗑️ Delete", "Delete", new { id = Model.TreatId })</p>

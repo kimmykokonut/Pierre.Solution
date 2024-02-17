@@ -187,14 +187,17 @@ _Optionally you can use a file watcher so you don't have to restart the server e
 
 ## Known Bugs
 * User's birthday is not entering into db correctly
+* Note: I added password override to Program.cs to make development less stressful and commented out the Password Regex on RegisterViewModel to be brought back when in more advanced Test Phasse/Production Mode. I kept it that way to not forget!
 
 ## Stretch Goals
 * Have separate roles for admins and logged in users (only admin can add, update, delete)
 * Add order form accessible to logged in users
-* Logged in user can only create, read, update, delete own orders.
+* Logged in user can only create, read, update, delete their own orders.
 * Greet user by nickname
 * Show user dashboard with birthday, image etc.
-
+* Add footer with GH link
+* Card-ify the content pages
+* Fix logo to center
 
 ## License
 MIT License. See license.md for further information

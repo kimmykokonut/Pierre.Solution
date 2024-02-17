@@ -9,11 +9,11 @@
   <p>Hello @User.Identity.Name!</p>
   @using (Html.BeginForm("LogOff", "Account"))
   {
-    <input type="submit" class="btn btn-danger" value="log out" />
+    <input type="submit" class="button-55" value=" log out" />
   }
 }
 else
 {
-  <p>@Html.ActionLink("register", "Register")</p>
-  <p>@Html.ActionLink("log in", "Login")</p>
+  <p class="button-55">@Html.ActionLink("register", "Register")</p>
+  <p class="button-55">@Html.ActionLink("log in", "Login")</p>
 }

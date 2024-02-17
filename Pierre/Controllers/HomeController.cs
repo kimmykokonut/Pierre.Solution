@@ -12,7 +12,6 @@ public class HomeController : Controller
   {
     _db = db;
   }
-
   [HttpGet("/")]
   public ActionResult Index()
   {
