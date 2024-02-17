@@ -4,6 +4,8 @@ _by Kim Robinson_
 
 ## An application with user authentication and many to many relationships with a theme of treats and flavor tags with full CRUD. Color palate is accessibility approved.
 
+![splash page](./Pierre/wwwroot/img/splash.png)
+
 ###  This app will allow a user to:
     - register, log in and log out of an account
     - have create, delete and update functionality when logged in
@@ -197,6 +199,7 @@ _Optionally you can use a file watcher so you don't have to restart the server e
 * Show user dashboard with birthday, image etc.
 * Card-ify the content pages
 * Fix header to not take so much room vertically and be responsive to screen size
+* Figure out styling issue in header. If the login div is in the header div, the 'log out' button loses it's link and is absorbed by the home link attached to the logo, but the login/register buttons work fine. for now, I pulled it into it's own div for functionality.
 
 ## License
 MIT License. See license.md for further information
