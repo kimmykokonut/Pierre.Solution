@@ -195,9 +195,8 @@ _Optionally you can use a file watcher so you don't have to restart the server e
 * Logged in user can only create, read, update, delete their own orders.
 * Greet user by nickname
 * Show user dashboard with birthday, image etc.
-* Add footer with GH link
 * Card-ify the content pages
-* Fix logo to center
+* Fix header to not take so much room vertically and be responsive to screen size
 
 ## License
 MIT License. See license.md for further information
