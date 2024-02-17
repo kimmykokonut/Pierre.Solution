@@ -1,12 +1,23 @@
-<div id="header">
-<a href="/">
-  <img id="logo" src="~/img/logo.png" alt="logo for application, click on routes to home page" >
-</a>
+<div style="float: right;">
+  @if (User.Identity.IsAuthenticated)
+  {
+    <p>Logged in: @User.Identity.Name</p>
+  }
+  else
+  {
+    <p>@Html.ActionLink("log in", "Login")</p>
+    <p>@Html.ActionLink("register", "Register")</p>
 
-<div id="navbar">
-  <a class="navButton m-2">@Html.ActionLink("Treats", "Index", "Treats")</a>
-  <a class="navButton m-2">@Html.ActionLink("Flavors", "Index", "Flavors")</a>
+  }
 </div>
+<div id="header">
+  <a href="/">
+    <img id="logo" src="~/img/logo.png" alt="logo for application, click on routes to home page">
+  </a>
 
-<hr />
+  <div id="navbar">
+    <a class="navButton m-2">@Html.ActionLink("Treats", "Index", "Treats")</a>
+    <a class="navButton m-2">@Html.ActionLink("Flavors", "Index", "Flavors")</a>
+  </div>
+  <hr />
 </div>
