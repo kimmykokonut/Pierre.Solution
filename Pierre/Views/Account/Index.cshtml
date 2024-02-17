@@ -2,11 +2,15 @@
   ViewData["Title"] = "Account Index View";
   Layout = "_Layout";
 }
-<h2>Authentication w identity</h2>
+<h2>Authentication Page</h2>
 <hr />
 @if (User.Identity.IsAuthenticated)
 {
   <p>Hello @User.Identity.Name!</p>
+  @using (Html.BeginForm("LogOff", "Account"))
+  {
+    <input type="submit" class="btn btn-danger" value="log out" />
+  }
 }
 else
 {
