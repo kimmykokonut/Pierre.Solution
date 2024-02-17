@@ -186,12 +186,14 @@ _Optionally you can use a file watcher so you don't have to restart the server e
 - Enjoy!  You can close the development server at anytime by entering `ctrl` + `c` in the terminal.
 
 ## Known Bugs
-* None known at this time
+* User's birthday is not entering into db correctly
 
 ## Stretch Goals
 * Have separate roles for admins and logged in users (only admin can add, update, delete)
 * Add order form accessible to logged in users
 * Logged in user can only create, read, update, delete own orders.
+* Greet user by nickname
+* Show user dashboard with birthday, image etc.
 
 
 ## License
