@@ -4,8 +4,6 @@
 }
 @using Pierre.Models;
 
-<p>@Html.ActionLink("Create or manage an account", "Index", "Account")</p>
-
 <div class="container">
   <div class="row">
     <div class="col" id="splashCard">
@@ -14,10 +12,10 @@
       {
         <p>No treats have been added yet!</p>
       }
-        @foreach (Treat treat in Model["treats"])
-        {
-          <h5 class="text-center">@Html.ActionLink(@treat.Name, "Details", "Treats", new { id = @treat.TreatId })</h5>
-        }
+      @foreach (Treat treat in Model["treats"])
+      {
+        <h5 class="text-center">@Html.ActionLink(@treat.Name, "Details", "Treats", new { id = @treat.TreatId })</h5>
+      }
     </div>
     <div class="col" id="splashCard">
       <h3 class="text-center">Flavors</h3>
@@ -25,9 +23,10 @@
       {
         <p>No flavors have been added yet!</p>
       }
-        @foreach (Flavor flavor in Model["flavors"])
-        {
-          <h5 class="text-center">@Html.ActionLink(@flavor.Type, "Details", "Flavors", new { id = @flavor.FlavorId })</h5>
-        }
+      @foreach (Flavor flavor in Model["flavors"])
+      {
+        <h5 class="text-center">@Html.ActionLink(@flavor.Type, "Details", "Flavors", new { id = @flavor.FlavorId })</h5>
+      }
     </div>
+    <p>@Html.ActionLink("Create or manage an account", "Index", "Account")</p>
   </div>

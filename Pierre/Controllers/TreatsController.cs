@@ -5,9 +5,11 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Pierre.Controllers;
 
+[Authorize]
 public class TreatsController : Controller
 {
   private readonly PierreContext _db;
@@ -15,6 +17,7 @@ public class TreatsController : Controller
   {
     _db = db;
   }
+  [AllowAnonymous]
   public ActionResult Index()
   {
     List<Treat> model = _db.Treats.ToList();
@@ -38,6 +41,7 @@ public class TreatsController : Controller
       return RedirectToAction("Index");
     }
   }
+  [AllowAnonymous]
   public ActionResult Details(int id)
   {
     Treat thisTreat = _db.Treats
