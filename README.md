@@ -13,23 +13,26 @@ _by Kim Robinson_
     - see both sides of the many-to-many relationship of Treats & Flavors
     - see a splash page listing all available treats and flavors, which each link to their detail page
 
+![SQL Design](./Pierre/wwwroot/img/sql.png)
+
 ### Technologies Used
 
-* C#
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+
 * ASP.Net Core Mvc
 * Entity Framework Core
 * Identity (for Authentication)
-* MySql database
 * MySql Workbench
-* Git
-* CSS
-* Bootstrap
 * HTML Helper methods
 * MVC Razor
 * ViewBag
 * ViewModel
-
-![SQL Design](./Pierre/wwwroot/img/sql.png)
 
 ## Setup/Installation Requirements
 
